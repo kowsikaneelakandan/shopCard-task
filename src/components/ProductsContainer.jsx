@@ -16,11 +16,11 @@ export default function ProductsContainer({setCart},{cart}){
     console.log(cart)
    // let cartCopy= cart
 //cartCopy.push(product)
-    setCart([cart,...product])
+    setCart(cart=>[...cart,product])
   }
  
   function removeCart(){
-    setCart([cart.filter((c)=>c.id!==products.id)])
+    setCart(cart=>[...cart.filter((c)=>c.id!==products.id)])
   };
   return(
     <div className="container">
