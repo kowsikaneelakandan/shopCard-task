@@ -5,7 +5,7 @@ export default function ProductsContainer({setCart},{cart}){
       const [products, setProducts]= useState([]);
   
   useEffect(() =>{
-    fetch("http://localhost:5173/products.json")
+    fetch("https://mocki.io/v1/27a30ccc-858a-41f5-8b77-cb8829e3cfee")
     .then((response)=>response.json())
     .then((result)=>{
       setProducts(result.data)
@@ -20,7 +20,7 @@ export default function ProductsContainer({setCart},{cart}){
   }
  
   function removeCart(){
-    setCart(cart=>[...cart.filter((c)=>c.id!==products.id)])
+    setCart(cart=>[cart.filter((c)=>c.id!==products.id)])
   };
   return(
     <div className="container">
